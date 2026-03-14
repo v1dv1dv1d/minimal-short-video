@@ -1,0 +1,15 @@
+# 前端 app
+app/node_modules/
+app/dist/
+app/.env
+app/.env.local
+app/.env.*.local
+
+# 后端 goproject
+goproject/uploads/
+goproject/*.exe
+
+# 系统与编辑器
+.DS_Store
+.idea/
+*.log

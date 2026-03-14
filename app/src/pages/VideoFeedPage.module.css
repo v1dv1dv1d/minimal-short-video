@@ -1,0 +1,318 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  background: var(--background-dark);
+  overflow: hidden;
+}
+
+.loadingWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 16px;
+  padding-top: 24px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topLeft .material-symbols-outlined {
+  font-size: 24px;
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topRight .material-symbols-outlined {
+  font-size: 24px;
+  color: #fff;
+}
+
+.addBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: var(--primary);
+  box-shadow: 0 4px 14px rgba(254, 47, 88, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBtn .material-symbols-outlined {
+  font-size: 20px;
+  color: #fff;
+}
+
+.videoArea {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  background: #0f172a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* 真实视频播放器：与封面同区域，播放时显示接口返回的 videoUrl */
+.videoPlayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.playBtn {
+  position: relative;
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.playBtn:hover {
+  opacity: 0.9;
+}
+
+.playBtn .material-symbols-outlined {
+  font-size: 40px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 64px;
+  left: 16px;
+  right: 80px;
+  z-index: 20;
+}
+
+.captionPill {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 100%;
+}
+
+.captionText {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  position: absolute;
+  right: 16px;
+  bottom: 96px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.profileWrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.profileImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  background: #1e293b;
+}
+
+.followBadge {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--background-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.followBadge .material-symbols-outlined {
+  font-size: 12px;
+  color: #fff;
+}
+
+.actionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.likeBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.15s ease;
+}
+
+.likeBtn:hover:not(:disabled) {
+  transform: scale(1.08);
+}
+
+.likeBtn:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.likeBtn:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.actionCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.actionCircle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.likeBtnActive .actionCircle,
+.actionCircle.likeBtnActive {
+  background: rgba(254, 47, 88, 0.25);
+}
+
+.likeBtn .actionCircle .material-symbols-outlined {
+  font-size: 28px;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.likeBtnActive .actionCircle .material-symbols-outlined,
+.actionCircle.likeBtnActive .material-symbols-outlined {
+  color: var(--primary);
+}
+
+.actionCircle .material-symbols-outlined {
+  font-size: 28px;
+  color: #fff;
+}
+
+.likeIcon {
+  color: inherit;
+}
+
+.actionCount {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer {
+  background: var(--background-dark);
+  padding-top: 8px;
+}
+
+.swipeHint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.swipeHint .material-symbols-outlined {
+  font-size: 18px;
+  color: #64748b;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.swipeHint p {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+  margin-top: 4px;
+}

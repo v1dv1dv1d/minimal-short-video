@@ -1,0 +1,252 @@
+.page {
+  max-width: 28rem;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: var(--background-dark);
+  padding-bottom: 100px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+  background: rgba(10, 5, 6, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.topBar .material-symbols-outlined {
+  font-size: 24px;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+.headerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #f8fafc;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px 32px;
+}
+
+.avatarWrap {
+  position: relative;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  padding: 4px;
+  background-size: cover;
+  background-position: center;
+  background-color: #1e293b;
+}
+
+.addBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--background-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBadge .material-symbols-outlined {
+  font-size: 14px;
+  color: #fff;
+}
+
+.username {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f8fafc;
+}
+
+.bio {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.statLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.followBtn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+}
+
+.messageBtn {
+  padding: 0 16px;
+  border-radius: var(--radius);
+  background: #1e293b;
+  color: #f8fafc;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageBtn .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #334155;
+}
+
+.tab,
+.tabActive {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.tabActive {
+  color: #f8fafc;
+  border-bottom: 2px solid var(--primary);
+}
+
+.tab .material-symbols-outlined,
+.tabActive .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  padding: 2px;
+  margin-bottom: 32px;
+}
+
+.gridItem {
+  aspect-ratio: 9 / 16;
+  background: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.gridCover {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.gridMeta {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.gridMeta .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.exitWrap {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.exitBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.exitBtn:hover {
+  color: var(--primary);
+}
+
+.exitBtn .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.bottomNavWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 28rem;
+  margin: 0 auto;
+  background: var(--background-dark);
+  border-top: 1px solid #334155;
+}

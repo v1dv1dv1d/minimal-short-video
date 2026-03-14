@@ -1,0 +1,53 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 16px 24px;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  background: var(--background-dark);
+  border-top: 1px solid rgba(248, 250, 252, 0.08);
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.link[aria-current='page'] {
+  color: #f8fafc;
+}
+
+.link:not([aria-current='page']):hover {
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.centerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 36px;
+  background: rgba(254, 47, 88, 0.2);
+  border: 1px solid rgba(254, 47, 88, 0.4);
+  border-radius: 12px;
+}
+
+.centerIcon {
+  font-size: 24px;
+  color: var(--primary);
+}
